@@ -128,6 +128,22 @@ Adicione novos componentes em `src/app/page.tsx` seguindo a estrutura existente.
 
 ---
 
+## 🔐 Variáveis de Ambiente (Vercel)
+
+Defina as variáveis no painel do projeto (Settings → Environment Variables):
+
+- `NEXT_PUBLIC_SITE_URL` → URL pública do site (ex: https://designsaas.vercel.app)
+- `NEXT_PUBLIC_GA_ID` → ID do Google Analytics (opcional)
+- `NEXT_PUBLIC_SIGNUP_URL` → URL de cadastro (opcional)
+- `NEXT_PUBLIC_LOGIN_URL` → URL de login (opcional)
+- `NEXT_PUBLIC_CHECKOUT_URL` → URL de checkout (opcional)
+- `NEXT_PUBLIC_DEMO_URL` → URL da demo (opcional)
+- `FORMSPREE_ENDPOINT` → Endpoint do Formspree para contato (opcional)
+
+Quando definidas, as CTAs e o formulário funcionam automaticamente.
+
+---
+
 ## 📝 Checklist Pré-Deploy
 
 - [x] ✅ Build foi testado com sucesso
@@ -136,6 +152,8 @@ Adicione novos componentes em `src/app/page.tsx` seguindo a estrutura existente.
 - [ ] Configurar domínio personalizado (opcional)
 - [ ] Adicionar Google Analytics (opcional)
 - [ ] Testar responsividade em diferentes dispositivos
+- [ ] Definir URLs de login/signup/checkout (opcional)
+- [ ] Configurar formulário de contato (Formspree) (opcional)
 
 ---
 

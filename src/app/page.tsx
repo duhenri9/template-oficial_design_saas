@@ -2,9 +2,15 @@
 
 import { useState } from 'react';
 import { ChevronDown, Check, Sparkles, Zap, Shield, Users } from 'lucide-react';
+import ContactForm from './components/ContactForm';
 
 export default function LandingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
+
+  const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL || '#';
+  const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL || '#';
+  const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || SIGNUP_URL;
+  const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || '#';
 
   const plans = [
     {
@@ -64,12 +70,13 @@ export default function LandingPage() {
             <a href="#features" className="text-gray-700 hover:text-purple-600 transition">Recursos</a>
             <a href="#pricing" className="text-gray-700 hover:text-purple-600 transition">Preços</a>
             <a href="#testimonials" className="text-gray-700 hover:text-purple-600 transition">Depoimentos</a>
+            <a href="#contact" className="text-gray-700 hover:text-purple-600 transition">Contato</a>
           </div>
           <div className="flex space-x-4">
-            <button className="text-gray-700 hover:text-purple-600 transition">Entrar</button>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition">
+            <a href={LOGIN_URL} className="text-gray-700 hover:text-purple-600 transition">Entrar</a>
+            <a href={SIGNUP_URL} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition">
               Começar Grátis
-            </button>
+            </a>
           </div>
         </nav>
       </header>
@@ -90,12 +97,12 @@ export default function LandingPage() {
             Colabore em tempo real, acesse templates premium e exporte em qualquer formato.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition transform hover:scale-105">
+            <a href={SIGNUP_URL} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition transform hover:scale-105">
               Comece Gratuitamente
-            </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition">
+            </a>
+            <a href={DEMO_URL} className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition">
               Ver Demo
-            </button>
+            </a>
           </div>
           <div className="mt-12">
             <div className="inline-flex items-center space-x-2 text-gray-600">
@@ -192,15 +199,18 @@ export default function LandingPage() {
                   <span className="text-5xl font-bold">${plan.price}</span>
                   <span className="text-gray-600">/mês</span>
                 </div>
-                <button
-                  className={`w-full py-3 rounded-full font-semibold transition ${
+                <a
+                  href={`${CHECKOUT_URL}${CHECKOUT_URL.includes('?') ? '&' : '?'}plan=${encodeURIComponent(
+                    plan.name.toLowerCase()
+                  )}&billing=${isAnnual ? 'annual' : 'monthly'}`}
+                  className={`w-full inline-block text-center py-3 rounded-full font-semibold transition ${
                     plan.highlighted
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg'
                       : 'border-2 border-gray-300 text-gray-700 hover:border-purple-600 hover:text-purple-600'
                   }`}
                 >
                   Começar Agora
-                </button>
+                </a>
                 <ul className="mt-8 space-y-4">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
@@ -275,6 +285,17 @@ export default function LandingPage() {
           <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition transform hover:scale-105">
             Comece Grátis Agora
           </button>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-3">Fale com a gente</h2>
+            <p className="text-lg text-gray-600">Tire dúvidas, peça uma demo ou solicite uma proposta.</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
 
