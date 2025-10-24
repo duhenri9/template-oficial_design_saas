@@ -29,15 +29,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true });
     }
 
-    return NextResponse.json(
-      {
-        error:
-          'Nenhum provedor configurado. Defina FORMSPREE_ENDPOINT no ambiente para ativar o formulário.',
-      },
-      { status: 501 }
-    );
+    // Fallback DEMO: aceitar envio sem provedor externo
+    try { console.log('[CONTACT DEMO] Mensagem recebida:', { name, email, message }); } catch {}
+    return NextResponse.json({ ok: true, demo: true });
   } catch (err: any) {
     return NextResponse.json({ error: err?.message || 'Erro interno' }, { status: 500 });
   }
 }
-
