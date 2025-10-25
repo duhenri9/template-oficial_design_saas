@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, Check, Sparkles, Zap, Shield, Users, FileText } from 'lucide-react';
+import { ChevronDown, Check, Sparkles, Zap, Shield, Users, FileText, Twitter, Linkedin, Github } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 export default function LandingClient() {
@@ -260,6 +260,65 @@ export default function LandingClient() {
           <ContactForm />
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-6">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-10">
+            {/* Brand */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600" />
+                <span className="text-xl font-bold">Sua Empresa Aqui</span>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Solução SaaS completa para acelerar seu lançamento e reduzir o tempo de go‑to‑market.
+              </p>
+              <div className="flex items-center gap-4 mt-4 text-gray-300">
+                <a href="#" aria-label="Twitter" className="hover:text-white transition"><Twitter className="w-5 h-5" /></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-white transition"><Linkedin className="w-5 h-5" /></a>
+                <a href="#" aria-label="GitHub" className="hover:text-white transition"><Github className="w-5 h-5" /></a>
+              </div>
+            </div>
+
+            {/* Produto */}
+            <div>
+              <h4 className="font-semibold mb-4">Produto</h4>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li><a href="#features" className="hover:text-white transition">Recursos</a></li>
+                <li><a href="#pricing" className="hover:text-white transition">Preços</a></li>
+                <li><a href="#testimonials" className="hover:text-white transition">Depoimentos</a></li>
+                <li><a href="/docs" className="hover:text-white transition">Documentação</a></li>
+              </ul>
+            </div>
+
+            {/* Empresa */}
+            <div>
+              <h4 className="font-semibold mb-4">Empresa</h4>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li><a href="#" className="hover:text-white transition">Sobre</a></li>
+                <li><a href="#" className="hover:text-white transition">Carreiras</a></li>
+                <li><a href="#" className="hover:text-white transition">Blog</a></li>
+              </ul>
+            </div>
+
+            {/* Contato */}
+            <div>
+              <h4 className="font-semibold mb-4">Contato</h4>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li><span className="text-gray-400">Email:</span> contato@seu-saas.com</li>
+                <li><span className="text-gray-400">Telefone:</span> (11) 4000‑0000</li>
+                <li><span className="text-gray-400">Endereço:</span> Av. Exemplo, 123 — São Paulo/SP</li>
+                <li><a href="/login" className="hover:text-white transition">Acessar</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 pt-6 text-center">
+            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Sua Empresa Aqui. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
