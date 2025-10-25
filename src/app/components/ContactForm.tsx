@@ -37,19 +37,24 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="max-w-2xl mx-auto bg-white p-6 md:p-10 rounded-2xl border border-gray-200 shadow-sm">
+      {status === 'success' && (
+        <div className="mb-6 p-3 rounded-lg border-2 border-green-200 bg-green-50 text-green-800 text-sm">
+          Mensagem enviada com sucesso! Entraremos em contato em breve.
+        </div>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Nome</label>
-          <input name="name" required className="w-full border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
+          <input name="name" required placeholder="Seu nome" className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input type="email" name="email" required className="w-full border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
+          <input type="email" name="email" required placeholder="seu@email.com" className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
         </div>
       </div>
       <div className="mt-6">
         <label className="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-        <textarea name="message" required rows={5} className="w-full border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
+        <textarea name="message" required rows={5} placeholder="Como podemos ajudar?" className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" />
       </div>
       <div className="mt-6 flex items-center gap-4">
         <button
@@ -70,4 +75,3 @@ export default function ContactForm() {
     </form>
   );
 }
-

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown, Check, Sparkles, Zap, Shield, Users } from 'lucide-react';
+import { ChevronDown, Check, Sparkles, Zap, Shield, Users, FileText } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 export default function LandingClient() {
@@ -105,9 +105,13 @@ export default function LandingClient() {
               Ver Demo
             </a>
           </div>
-          <div className="mt-4">
-            <a href="/docs" className="inline-block text-sm text-gray-700 hover:text-purple-600 transition underline underline-offset-4">
-              Ver Documentação (guia rápido de customização)
+          <div className="mt-6 max-w-2xl mx-auto">
+            <a
+              href="/docs"
+              className="group flex items-center justify-center gap-2 px-5 py-3 rounded-xl border-2 border-indigo-200 bg-indigo-50/60 text-indigo-900 font-semibold hover:bg-indigo-100 hover:border-indigo-300"
+            >
+              <FileText className="w-4 h-4 text-indigo-600" />
+              Ver Documentação — guia rápido de customização
             </a>
           </div>
           <div className="mt-12">

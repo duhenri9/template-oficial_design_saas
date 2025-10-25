@@ -101,10 +101,22 @@ export default function CheckoutPage() {
                 <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">{formatBRL(total)}</span>
               </div>
 
-              <a href="#" onClick={payDemo} className="mt-4 w-full py-3 rounded-xl text-center font-semibold transition bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:shadow-lg">
-                Pagar (DEMO)
-              </a>
-              <Link href="/" className="w-full block py-3 rounded-xl text-center font-semibold border-2 border-gray-200 text-gray-700 hover:border-indigo-200 mt-2">Voltar</Link>
+              {/* Ações */}
+              <div className="pt-4 mt-2 border-t border-gray-100">
+                <a
+                  href="#"
+                  onClick={payDemo}
+                  className="mt-6 w-full block py-3.5 rounded-xl text-center font-semibold transition bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:shadow-lg"
+                >
+                  Pagar (DEMO)
+                </a>
+                <Link
+                  href="/"
+                  className="w-full block py-3 rounded-xl text-center font-semibold border-2 border-gray-200 text-gray-700 hover:border-indigo-200 mt-3"
+                >
+                  Voltar
+                </Link>
+              </div>
             </div>
           </div>
         </div>
