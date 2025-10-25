@@ -10,7 +10,8 @@ export default function LandingClient() {
   const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL || '#';
   const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL || '#';
   const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || SIGNUP_URL;
-  const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || '#';
+  // No demo, leve o botão "Ver Demo" para o fluxo /checkout por padrão
+  const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || '/checkout';
 
   const plans = [
     {
@@ -102,6 +103,11 @@ export default function LandingClient() {
             </a>
             <a href={DEMO_URL} className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition">
               Ver Demo
+            </a>
+          </div>
+          <div className="mt-4">
+            <a href="/docs" className="inline-block text-sm text-gray-700 hover:text-purple-600 transition underline underline-offset-4">
+              Ver Documentação (guia rápido de customização)
             </a>
           </div>
           <div className="mt-12">
@@ -209,4 +215,3 @@ export default function LandingClient() {
     </div>
   );
 }
-
