@@ -36,7 +36,7 @@ function DemoPTBR() {
 }
 
 export default function Page() {
-  const isDemo = process.env.NEXT_PUBLIC_ENABLE_DEMO === 'true';
+  const isDemo = process.env.VERCEL === '1' || process.env.NEXT_PUBLIC_ENABLE_DEMO === 'true';
   return isDemo ? <DemoPTBR /> : <LandingClient />;
 }
 
