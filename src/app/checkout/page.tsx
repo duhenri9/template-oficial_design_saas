@@ -26,6 +26,11 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-5xl mx-auto px-6 py-12">
+        <div className="mb-4 p-4 rounded-lg border-2 border-indigo-200 bg-indigo-50 text-indigo-900">
+          <p className="text-sm font-medium">
+            Dica (DEMO): Ajuste os preços em <span className="font-mono bg-white px-1 py-0.5 rounded border">src/app/checkout/page.tsx</span> nas constantes <span className="font-mono bg-white px-1 py-0.5 rounded border">TEMPLATE_PRICE</span> e <span className="font-mono bg-white px-1 py-0.5 rounded border">CUSTOM_PRICE</span>. Em produção, conecte o provedor de pagamento de sua escolha.
+          </p>
+        </div>
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Finalize sua compra (DEMO)</h1>
           <p className="text-sm text-gray-500 mt-2">Fluxo de checkout simulado (sem provedores externos)</p>
@@ -107,4 +112,3 @@ export default function CheckoutPage() {
     </div>
   );
 }
-
