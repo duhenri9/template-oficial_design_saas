@@ -62,6 +62,29 @@ export default function DocsPage() {
             </ul>
           </section>
 
+          <section>
+            <h2 className="text-xl font-semibold text-gray-900 mb-3">7) Próximo passo na Vercel (1 minuto)</h2>
+            <ol className="list-decimal pl-5 text-gray-700 space-y-2">
+              <li>
+                Projeto: <strong>template-oficial-design-saas</strong>
+              </li>
+              <li>
+                Em <strong>Deployments</strong> → selecione o último deployment (ex.: commit <span className="font-mono">711ab2c</span>) → clique em <strong>Redeploy</strong> e <strong>desmarque</strong> “Use existing Build Cache”.
+              </li>
+              <li>
+                Validar em aba anônima:
+                <div className="mt-1">
+                  <a href="https://template-oficial-design-saas.vercel.app" className="text-indigo-600 hover:text-indigo-700 underline">https://template-oficial-design-saas.vercel.app</a>
+                </div>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Deve exibir a <strong>Landing oficial</strong>.</li>
+                  <li>Clique <strong>Ver Demo</strong> → abre <span className="font-mono">/checkout</span> (DEMO) → “Pagar (DEMO)” → redireciona para <span className="font-mono">/checkout/success?demo=1…</span>.</li>
+                  <li>Clique <strong>Ver Documentação</strong> → abre <span className="font-mono">/docs</span> (este guia).</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
           <div className="mt-8">
             <a href="/" className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold">Voltar à Demo</a>
           </div>
@@ -70,4 +93,3 @@ export default function DocsPage() {
     </div>
   );
 }
-
