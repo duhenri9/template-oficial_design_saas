@@ -7,8 +7,8 @@ import ContactForm from '../components/ContactForm';
 export default function LandingClient() {
   const [isAnnual, setIsAnnual] = useState(false);
 
-  const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL || '#';
-  const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL || '#';
+  const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL || '/login';
+  const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL || '/login';
   // Em modo demo, preferimos /checkout por padrão
   const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || '/checkout';
   const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || '/checkout';
