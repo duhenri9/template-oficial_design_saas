@@ -86,7 +86,7 @@ export default function LandingClient() {
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-            🎉 Novo: IA integrada para designs automáticos
+            🎉 Novo: IA integrada para Atender, Agendar e Vender (Sua Solução aqui)
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">Template SaaS Oficial</span>
