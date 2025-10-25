@@ -116,3 +116,31 @@ O projeto pode ser deployado em qualquer plataforma que suporte Next.js, como:
 ## 📝 Licença
 
 MIT
+
+---
+
+## 📌 Estado Atual (Demo PT‑BR)
+
+- Este projeto serve a DEMO do Template Oficial em produção (Vercel) com a UI oficial em português.
+- A home exibe a landing oficial; CTAs:
+  - "Ver Demo" → `/checkout` (modo DEMO, sem provedores externos)
+  - "Entrar" → `/login` (não funcional, apresentação)
+  - "Começar Grátis" → `/signup` (não funcional, apresentação)
+  - "Ver Documentação" → `/docs` (guia rápido e checklist Vercel)
+
+### Rotas principais
+- `/` – Landing oficial (PT‑BR)
+- `/checkout` – Checkout DEMO (redireciona para `/checkout/success?demo=1`)
+- `/checkout/success` – Página de sucesso (DEMO)
+- `/login` e `/signup` – Telas de apresentação (sem backend)
+- `/docs` – Guia de uso e deploy
+- `/api/contact` – Aceita "DEMO" sem provider; para provider defina `FORMSPREE_ENDPOINT`
+
+### Ativação na Vercel
+- A DEMO é exibida automaticamente na Vercel (detecção por `process.env.VERCEL`).
+- Para alternar manualmente em outros ambientes, use `NEXT_PUBLIC_ENABLE_DEMO=true`.
+
+### Customização rápida
+- Textos do hero/features/rodapé: `src/app/components/LandingClient.tsx`
+- Preços do DEMO: `src/app/checkout/page.tsx` (`TEMPLATE_PRICE` e `CUSTOM_PRICE`)
+- Formulário de contato: `src/app/components/ContactForm.tsx` e `src/app/api/contact/route.ts`
