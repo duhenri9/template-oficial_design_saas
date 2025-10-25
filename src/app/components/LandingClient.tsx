@@ -9,8 +9,8 @@ export default function LandingClient() {
 
   const SIGNUP_URL = process.env.NEXT_PUBLIC_SIGNUP_URL || '#';
   const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL || '#';
-  const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || SIGNUP_URL;
-  // No demo, leve o botão "Ver Demo" para o fluxo /checkout por padrão
+  // Em modo demo, preferimos /checkout por padrão
+  const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || '/checkout';
   const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || '/checkout';
 
   const plans = [
@@ -155,6 +155,50 @@ export default function LandingClient() {
                 Trabalhe em equipe em tempo real. Comentários, versões e aprovações integradas.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">O que dizem nossos clientes</h2>
+            <p className="text-xl text-gray-600">Resultados reais com o Template Oficial</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Maria Silva',
+                role: 'Founder, Studio Criativo',
+                text: 'Conseguimos lançar nosso SaaS em semanas. O fluxo de pagamentos e a base já pronta fizeram toda a diferença.'
+              },
+              {
+                name: 'João Santos',
+                role: 'CTO, ProdTech',
+                text: 'A arquitetura é enxuta e bem pensada. O modo demo ajuda a validar a jornada antes de ligar provedores reais.'
+              },
+              {
+                name: 'Ana Costa',
+                role: 'Product Designer',
+                text: 'A landing oficial pronta, com seções e CTAs bem definidos, acelerou muito nossa validação de mercado.'
+              }
+            ].map((t) => (
+              <div key={t.name} className="p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 italic">“{t.text}”</p>
+                <div>
+                  <p className="font-bold">{t.name}</p>
+                  <p className="text-gray-600 text-sm">{t.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
