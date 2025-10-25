@@ -88,14 +88,14 @@ export default function LandingClient() {
           <div className="inline-block mb-4 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
             🎉 Novo: IA integrada para designs automáticos
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Crie Designs
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">Template SaaS Oficial</span>
             <br />
-            Incríveis em Minutos
+            Lance seu produto em semanas
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            A plataforma completa de design que transforma suas ideias em realidade.
-            Colabore em tempo real, acesse templates premium e exporte em qualquer formato.
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Base completa com autenticação, checkout, e‑mails e infraestrutura pronta para produção —
+            personalize o visual, defina seus planos e publique com segurança, rapidez e qualidade.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={SIGNUP_URL} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition transform hover:scale-105">
@@ -130,34 +130,24 @@ export default function LandingClient() {
       <section id="features" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Tudo que você precisa para criar
-            </h2>
-            <p className="text-xl text-gray-600">
-              Recursos poderosos para designers de todos os níveis
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Tudo para lançar seu SaaS</h2>
+            <p className="text-lg md:text-xl text-gray-600">Recursos essenciais prontos para uso — do design ao pagamento</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white border border-purple-100 hover:shadow-xl transition">
               <Zap className="w-12 h-12 text-purple-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-3">Super Rápido</h3>
-              <p className="text-gray-600">
-                Interface otimizada para máxima produtividade. Crie designs complexos em segundos.
-              </p>
+              <h3 className="text-2xl font-bold mb-3">Lançamento Acelerado</h3>
+              <p className="text-gray-600">Stack moderna, componentes prontos e padrões de projeto que reduzem drasticamente o time‑to‑market.</p>
             </div>
             <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:shadow-xl transition">
               <Shield className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-3">Seguro</h3>
-              <p className="text-gray-600">
-                Seus dados protegidos com criptografia de ponta a ponta e backups automáticos.
-              </p>
+              <h3 className="text-2xl font-bold mb-3">Segurança por Padrão</h3>
+              <p className="text-gray-600">Boas práticas de autenticação, proteção de dados e infraestrutura preparada para produção.</p>
             </div>
             <div className="p-8 rounded-2xl bg-gradient-to-br from-green-50 to-white border border-green-100 hover:shadow-xl transition">
               <Users className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-3">Colaborativo</h3>
-              <p className="text-gray-600">
-                Trabalhe em equipe em tempo real. Comentários, versões e aprovações integradas.
-              </p>
+              <h3 className="text-2xl font-bold mb-3">Código Colaborativo</h3>
+              <p className="text-gray-600">Base organizada e documentada para evoluir em equipe, com clareza e manutenção simples.</p>
             </div>
           </div>
         </div>
